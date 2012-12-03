@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: IPCovertSender - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Tim\LOCALS~1\Temp\RSP15E.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/IPCovertSender.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Courses\Information Security\2010Autum\实验\实验三\IPCovertSender\IPCovertSenderDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Tim\LOCALS~1\Temp\RSP15E.tmp" 
+Creating temporary file "C:\DOCUME~1\Tim\LOCALS~1\Temp\RSP15F.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/IPCovertSender.pdb" /debug /machine:I386 /out:"Debug/IPCovertSender.exe" /pdbtype:sept 
+".\Debug\IPCovertSender.obj"
+".\Debug\IPCovertSenderDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\IPCovertSender.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\Tim\LOCALS~1\Temp\RSP15F.tmp"
+<h3>Output Window</h3>
+Compiling...
+IPCovertSenderDlg.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+IPCovertSender.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

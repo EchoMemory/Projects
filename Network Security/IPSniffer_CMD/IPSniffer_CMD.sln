@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IPSniffer_CMD", "IPSniffer_CMD.vcxproj", "{2199F2E5-7E27-2042-581D-9E2375F29491}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2199F2E5-7E27-2042-581D-9E2375F29491}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2199F2E5-7E27-2042-581D-9E2375F29491}.Debug|Win32.Build.0 = Debug|Win32
+		{2199F2E5-7E27-2042-581D-9E2375F29491}.Release|Win32.ActiveCfg = Release|Win32
+		{2199F2E5-7E27-2042-581D-9E2375F29491}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
