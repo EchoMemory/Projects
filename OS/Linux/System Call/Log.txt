@@ -1,0 +1,52 @@
+﻿/*------------
+Author:     Mlx
+Date:	    2012-12-3
+Environment:32位Ubuntun 11.04 内核版本2.6.38.8  VirtualBox的环境
+------------*/
+
+Preparation：（最好不用装vb的增强功能）
+
+	1：切换root权限
+	2：修改sources.list 
+	3：apt-get update
+	4：apt-get install build-essential kernel-package libncurses5-dev initramfs-tools
+	5：使用uname -a 查看现在内核版本，并从kernel.org下载一个并解压缩
+
+Compile方法1：(生成deb文件以后也可以安装)
+
+	1：切换到内核压缩完的路径，执行cp /boot/config-`uname -r` ./.config 复制config文件
+	2：make menuconfig，使用Load an Alternate Configuration File选择你刚才拷贝过来的.config文件作为配置文件
+	3：照PPT增加自己的系统调用号和代码
+	4：fakeroot make-kpkg --initrd --revision=1.0 kernel_image生成deb文件
+	5：dpkg -i linux-image-X.X.XX_1.0_i386.deb 应该在上一级目录下
+	6：检查/boot目录下有无生成initrd文件，没有的话mkinitramfs -o /boot/initrd.img-2.X.XX 强制生成
+	7：切换到/boot/grub目录下修改menu.list的启动时间，并修改grub.cfg增加启动项，照着原来有的把复制下更改路径位置
+	8：打完重启收工
+
+Compile方法2：
+
+	1、2、3同上
+	4：make all -j2>/dev/null
+	5：make modules_install
+	6：make install
+	7、8同上
+
+FunctionCall：
+
+	1：编写代码
+	#include <stdio.h>
+	#include <linux/unistd.h>
+	#define __NR_wtfcall X // X为你前面定义的系统调用号码
+	int main()
+	{
+  		int n;
+  		while(scanf("%d",&n)!=EOF)
+  		{
+     			int ans = syscall(__NR_wtfcall,n);
+     			printf("This is the wtf ans: %d\n",ans);
+  		}
+  		return 0;
+	}
+	2：gcc a.c -o e
+	3：./e
+	4：AC!
